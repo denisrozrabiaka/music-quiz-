@@ -1,10 +1,13 @@
 import React from 'react'
+import parse from 'html-react-parser';
+
 
 function Questionaire({handleAnswer,showAnswers,handleNextQuestion, data:{question, correct_answer, answers}}) {
+    console.log(question);
     return (
         <>
             <div className="questionClass">
-                <h1 dangerouslySetInnerHTML={{__html:question}} />
+            <h1>{parse(`<span>${question}</span>`)}</h1>
             </div>
             <div className="button-overall">
                 {answers.map((answer,idx) => {
@@ -12,7 +15,7 @@ function Questionaire({handleAnswer,showAnswers,handleNextQuestion, data:{questi
                         answer === correct_answer ? "green-button": "red-button"
                     ) : "";
                     return(
-                        <button className={`normal-button ${specialClassName}`} 
+                        <button key={idx} className={`normal-button ${specialClassName}`}
                         onClick = {() => handleAnswer(answer)}
                         dangerouslySetInnerHTML={{__html:answer}} />
 
