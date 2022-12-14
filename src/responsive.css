@@ -1,0 +1,26 @@
+@media only screen and (min-width: 768px) {
+
+
+  .container {
+        width: 100%;
+        margin: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .body .questionClass {
+        min-width: 340px;
+    }
+
+    .button-overall {
+        display: block;
+        min-width: 340px;
+        column-count: 1;
+    }
+
+    .normal-button {
+        display: block;
+        min-width: 340px;
+    }
+}
+

@@ -2,6 +2,7 @@ import Axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Questionaire from './components/Questionaire';
+import './responsive.css';
 
 const API_URL = "https://opentdb.com/api.php?amount=20&category=12&difficulty=medium&type=multiple";
 
